@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/checkout.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-controls">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/favicon.png" alt="">
+                    <h1>Green Nursery</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Categories.html">Categories</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="right-controls">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">&#128269;</button>
+                </div>
+
+                <div class="cart-icon">
+                    <a href="#">
+                        <img src="img/cart.png" alt="">
+                        <li><a href="checkout.html" class="checkout-button">Checkout</a></li>
+                    </a>
+                </div>
+            </div>
+    </header>
+    <div class="checkout-page">CHECKOUT PAGE</div>
+    <!-- Product Card -->
+    <div class="checkout-product">
+        <h1>YOUR ORDER</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Remove</th>
+                    <th>Images</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </tbody>
+            <tbody id="checkout-card">
+                <tr>
+                    <th colspan="5">Subtotal</th>
+                    <th>
+                        <div>0$</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="5">Total</th>
+                    <th>
+                        <div>0$</div>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Button Coupon -->
+        <div class="coupon-form">
+            <div class="form-group toggle-coupon" onclick="toggleCoupon()"><button type="submit">Apply Coupon</button>
+            </div>
+            <div class="form-group coupon-input" id="couponInput" style="display: none;">
+                <input type="text" id="couponCode" name="couponCode" placeholder="Enter Your Coupon">
+                <button type="submit">Use Coupon</button>
+            </div>
+        </div>
+        <!-- End Button Coupon -->
+    </div>
+    <!-- End Product Card -->
+    <!-- Checkout Form -->
+    <div class="checkout-area">
+        <div class="checkout-form">
+            <!-- Button Login -->
+            <div class="buttons-checkout">
+                <button class="button-checkout">Login</button>
+            </div>
+            <!-- End Button Login -->
+            <h1>BILLING DETAILS</h1>
+            <form>
+                <!-- From Input Imformation -->
+                <div class="form-group">
+                    <label for="name">Full Name :</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label for="city-select">Country *</label>
+                    <select id="city-select" name="city">
+                        <option value="hanoi">Hanoi</option>
+                        <option value="hochiminh">Ho Chi Minh</option>
+                        <option value="danang">Da Nang</option>
+                        <option value="haiphong">Hai Phong</option>
+                        <option value="cantho">Can Tho</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="town">Town / City *</label>
+                    <input type="text" id="town" name="town" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State / County *</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address :</label>
+                    <input type="text" id="address" name="address" required placeholder="room - street - locality">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telephone :</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Order Notes</label>
+                    <textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                </div>
+                <!-- End From Input Imformation -->
+                <!-- Select Card -->
+                <div class="form-groups">
+                    <label>Select a payment method</label>
+                    <div class="form-groups toggleCard" onclick="toggleCard()"><img src="img/payments.png"></div>
+                    <div class="form-groups" id="cardInput" style="display: none;">
+                        <div class="payment-method selected" onclick="selectPaymentMethod(this)">Master Card
+                        </div>
+                        <div class="payment-method" onclick="selectPaymentMethod(this)">Visa Card</div>
+                        <div class="payment-method" onclick="selectPaymentMethod(this)">PayPal</div>
+                    </div>
+                </div>
+                <!-- End Select Card -->
+                <button class="place-order" type="submit">PLACE ORDER</button>
+            </form>
+        </div>
+        <div class="checkout-img">
+            <img src="img/CheckoutBG5.png" alt="">
+        </div>
+    </div>
+    <!-- End Checkout Form -->
+    <!-- Checkout Icon -->
+    <div class="checkout-icon">
+        <ul class="checkout-iconitem">
+            <div>
+                <img src="img/car.png" alt="">
+            </div>
+            <div>
+                <h3>Free Shipping</h3>
+                <p>Capped at $100 per order</p>
+            </div>
+        </ul>
+        <ul class="checkout-iconitem">
+            <div>
+                <img src="img/card.png" alt="">
+            </div>
+            <div>
+                <h3>Safe Payment</h3>
+                <p>With our payment gateway</p>
+            </div>
+        </ul>
+        <ul class="checkout-iconitem">
+            <div>
+                <img src="img/favicon.png" alt="">
+            </div>
+            <div>
+                <h3>Best Services</h3>
+                <p>Friendly & Supper Services</p>
+            </div>
+        </ul>
+    </div>
+    <!-- End Checkout Icon -->
+</body>
+<script src="JS/checkout.js"></script>
+
+</html>

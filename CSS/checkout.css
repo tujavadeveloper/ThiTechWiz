@@ -1,0 +1,236 @@
+:root {
+    --color-gray: #475569;
+    --color-gray-light: #d4d4d8;
+    --color-lime: #bef264;
+    --color-white-light: #fafaf9;
+    --color-black: #09090b;
+}
+
+.checkout-page {
+    background: url(CheckoutBG4.png) no-repeat;
+    height: 270px;
+    background-size: 1900px auto;
+    font-size: 40px;
+    padding-top: 230px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th:nth-child(1) {
+    width: 100px;
+}
+
+table th:nth-child(4) {
+    width: 200px;
+}
+
+table th:nth-child(5) {
+    width: 400px;
+}
+
+table th:nth-child(6) {
+    width: 200px;
+}
+
+.checkout-product th {
+    font-size: 22px;
+    font-weight: normal;
+    border: 1px #ccc solid;
+    text-align: center;
+    background-color: var(--color-lime);
+}
+
+.checkout-product {
+    margin: 0px 150px;
+}
+
+.checkout-product h1 {
+    text-align: center;
+}
+
+.checkout-product h1::after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 3px;
+    background-color: var(--color-lime);
+    margin: 5px auto;
+}
+
+.payment-method {
+    margin: 5px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.payment-method.selected {
+    background-color: #eee;
+}
+
+#login-checkout {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.button-checkout:hover {
+    box-shadow: inset -45px 0 0 0 var(--color-lime), inset 45px 0 0 0 var(--color-lime);
+}
+
+.buttons-checkout button {
+    margin: 5px;
+    padding: 10px 23px;
+    color: var(--color-white-light);
+    border: 2px solid var(--color-white-light) !important;
+    background-color: var(--color-gray);
+    transition: 0.4s;
+    font-size: 15px;
+}
+
+.toggleCard {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.place-order {
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px 20px;
+}
+
+.coupon-form {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#couponInput {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.coupon-form input {
+    width: 20%;
+    margin: 10px 0 10px;
+    height: 30px;
+}
+
+.coupon-form button {
+    height: 35px;
+}
+
+.checkout-form .form-group input {
+    width: 99%;
+    margin: 10px 0 10px;
+    height: 30px;
+}
+
+.checkout-form .form-group select {
+    width: 99.9%;
+    margin: 10px 0 10px;
+    height: 40px;
+}
+
+.checkout-form .form-group textarea {
+    margin: 10px 0 10px;
+}
+
+.checkout-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form {
+    border-radius: 15px;
+    margin-right: 5px;
+    width: 50%;
+    height: 80%;
+    padding: 10px;
+    background-color: var(--color-gray-light);
+}
+
+.checkout-form h1 {
+    border-bottom: 3px solid var(--color-lime);
+    width: 290px;
+}
+
+.checkout-form button {
+    text-transform: uppercase;
+    color: var(--color-white-light);
+    border: 0.5px solid var(--color-gray-light);
+    background-color: var(--color-gray);
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+    &:hover {
+        background-color: var(--color-lime);
+        cursor: pointer;
+    }
+}
+
+.checkout-area {
+    display: flex;
+    margin: 40px 150px 30px 150px;
+    align-items: stretch;
+}
+
+.checkout-icon {
+    display: flex;
+    margin: 40px 150px 30px 150px;
+    justify-content: center;
+}
+
+.checkout-icon img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 0px !important;
+}
+
+.checkout-icon .checkout-iconitem {
+    display: flex;
+    width: 24%;
+    border: 1px dashed var(--color-lime);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 30px 40px;
+}
+
+.checkout-iconitem h3 {
+    padding: 0 10px;
+    margin: 0;
+}
+
+.checkout-iconitem p {
+    padding: 0 10px;
+    margin: 0;
+}
+
+.checkout-area .checkout-img {
+    width: 50%;
+    margin-left: 5px;
+}
+
+.checkout-area .checkout-img img {
+    border-radius: 15px;
+    height: 1014px;
+}
+
+.coupon-input button,
+.toggle-coupon button {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-white-light);
+    border: 0.5px solid var(--color-gray-light);
+    background-color: var(--color-gray);
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: var(--color-lime);
+        cursor: pointer;
+    }
+}
